@@ -1,0 +1,1 @@
+Correção: TypeScript incluído; useLegacyBridge ativado; workflow de build revisado.
