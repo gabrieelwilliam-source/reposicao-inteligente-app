@@ -430,6 +430,12 @@ window.REPOSICAO_DEMO_DATA = {"generatedAt":"2026-08-29T15:00:00","config":{"dia
 
   window.addEventListener('ri-native-location',e=>{const d=e.detail||{};if(Number.isFinite(d.latitude)&&Number.isFinite(d.longitude)){lastGps={lat:d.latitude,lon:d.longitude,accuracy:d.accuracy||0,speed:d.speed||null,heading:d.bearing||null};if(visit){const g=gpsSummary(lastGps,storeConfig(visit.loja));setGpsUi(lastGps,g.status,g.distance)}}});
   window.addEventListener('ri-native-tracking-error',e=>{const m=e.detail?.message||'Falha no rastreamento em segundo plano.';if(shift){els.shiftMessage.textContent=m;sendTrackingEvent('BACKGROUND_GPS_ERROR','WARN',m,{code:e.detail?.code||null})}});
+  window.addEventListener('ri-native-permissions',e=>{
+    const p=e.detail||{};
+    if(shift && p.notification && p.notification!=='granted'){
+      els.shiftMessage.textContent='Atenção: permita as notificações do aplicativo para o GPS continuar com a tela bloqueada.';
+    }
+  });
 
   els.loginForm.addEventListener('submit',e=>{e.preventDefault();login(els.accessCode.value)});els.logout.addEventListener('click',logout);els.client.addEventListener('change',()=>{
     const chosen=els.client.value;

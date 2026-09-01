@@ -1,0 +1,17 @@
+VERSÃO 6.0.2 — CORREÇÃO DE GPS EM SEGUNDO PLANO
+
+Ajustes:
+- Solicitação explícita da permissão de NOTIFICAÇÕES antes do GPS nativo.
+- O expediente não afirma que o background está OK se o Android negar notificações.
+- Ícone vetorial próprio para a notificação persistente.
+- Canal: "Rastreamento do expediente".
+- Mantido android.useLegacyBridge=true.
+- Mantido POST nativo direto para o webhook V6 GPS.
+
+Depois de instalar esta versão:
+1. Desinstale ou atualize o APK anterior.
+2. Abra o app.
+3. Ao iniciar expediente, permita localização e notificações.
+4. Puxe a barra de notificações.
+5. Deve aparecer "Reposição Inteligente — Expediente ativo — localização sendo registrada."
+6. Só depois bloqueie a tela e teste por 10 minutos.
