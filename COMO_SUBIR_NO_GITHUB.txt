@@ -1,0 +1,35 @@
+PASTA PRONTA PARA O GITHUB
+
+No repositório reposicao-inteligente-app:
+
+1. Apague os arquivos duplicados que você colocou na raiz:
+   - android-debug-apk.yml
+   - native-tracking.js
+   - patch-android.mjs
+
+2. Clique em Add file > Upload files.
+
+3. Arraste TODO o conteúdo desta pasta para a área de upload.
+
+A estrutura precisa ficar assim:
+
+.github/
+  workflows/
+    android-debug-apk.yml
+
+scripts/
+  patch-android.mjs
+
+src/
+  native-tracking.js
+
+public/
+
+ANDROID_MANIFEST_SNIPPET.xml
+IOS_INFO_PLIST_SNIPPET.xml
+README.md
+capacitor.config.ts
+index.html
+package.json
+
+Depois clique em Commit changes e vá na aba Actions.
