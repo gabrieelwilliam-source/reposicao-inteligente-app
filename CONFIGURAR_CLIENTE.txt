@@ -1,0 +1,23 @@
+PERSONALIZAÇÃO PARA NOVOS CLIENTES
+
+1. URL do n8n
+No index.html, altere:
+DEFAULT_API_URL='https://.../webhook/reposicao-vendedor'
+
+2. Marca
+Substitua public/logo-fr.png pela marca do cliente.
+Mantenha o mesmo nome para não precisar alterar o HTML.
+
+3. Nome do aplicativo
+capacitor.config.ts:
+appId
+appName
+
+4. Produtos
+Os nomes vêm do n8n/planilha. Os cinco produtos FR possuem fotos próprias.
+Produtos desconhecidos continuam funcionando, apenas sem foto personalizada.
+
+5. Fluxo vendedor
+Entrar -> Loja -> Estoque -> Pedido -> Concluído.
+
+O GPS e o expediente permanecem ativos em segundo plano enquanto a jornada estiver aberta.
